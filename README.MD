@@ -17,13 +17,14 @@ Also including: Linux Mint, Linux Mint Debian Edition (LMDE), elementaryOS, bash
 
 Alternatively, for Node.js 10:
 
-<div style="background-color:#2d2d2d">
+<div style="background-color:#2d2d2d; height: 100px; width: 100px">
     <code>curl -sL https://deb.nodesource.com/setup_10.x | sudo -E bash -</code>
     <br>
     <code>sudo apt-get install -y nodejs</code>
 </div>
-
+<br>
 Optional: install build tools
+<br>
 To compile and install native addons from npm you may also need to install build tools:
 
 <code>sudo apt-get install -y build-essential</code>
