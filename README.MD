@@ -1,5 +1,5 @@
 # NODEJS
-![nodejs](http://yannickloriot.com/wp-content/uploads/2016/04/nodejs_logo_2016.png)
+![nodejs](http://carlofontanos.com/wp-content/uploads/2016/09/nodejs-ecommerce-with-watermark.jpg)
 
 # Descriptrion
 
@@ -17,13 +17,13 @@ Also including: Linux Mint, Linux Mint Debian Edition (LMDE), elementaryOS, bash
 
 Alternatively, for Node.js 10:
 
-<div style="background-color:#2d2d2d; height: 100px; width: 100px">
-    <code>curl -sL https://deb.nodesource.com/setup_10.x | sudo -E bash -</code>
-    <br>
-    <code>sudo apt-get install -y nodejs</code>
-</div>
+<code>curl -sL https://deb.nodesource.com/setup_10.x | sudo -E bash -</code>
+<br>
+<code>sudo apt-get install -y nodejs</code>
+
 <br>
 Optional: install build tools
+<br>
 <br>
 To compile and install native addons from npm you may also need to install build tools:
 
