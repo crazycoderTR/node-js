@@ -17,9 +17,11 @@ Also including: Linux Mint, Linux Mint Debian Edition (LMDE), elementaryOS, bash
 
 Alternatively, for Node.js 10:
 
-<code>curl -sL https://deb.nodesource.com/setup_10.x | sudo -E bash -</code>
-<br>
-<code>sudo apt-get install -y nodejs</code>
+<div style="background-color:#2d2d2d">
+    <code>curl -sL https://deb.nodesource.com/setup_10.x | sudo -E bash -</code>
+    <br>
+    <code>sudo apt-get install -y nodejs</code>
+</div>
 
 Optional: install build tools
 To compile and install native addons from npm you may also need to install build tools:
@@ -28,18 +30,18 @@ To compile and install native addons from npm you may also need to install build
 
 ## Available architectures:
 
-* i386 (32-bit)
-* amd64 (64-bit)
-* armhf (ARM 32-bit hard-float, ARMv7 and up: arm-linux-gnueabihf)
+* <b>i386</b> (32-bit)
+* <b>amd64</b> (64-bit)
+* <b>armhf</b> (ARM 32-bit hard-float, ARMv7 and up: arm-linux-gnueabihf)
 
 ## Supported Ubuntu versions:
 
-* Ubuntu 14.04 LTS (Trusty Tahr)
-* Ubuntu 16.04 LTS (Xenial Xerus)
+* <b>Ubuntu</b> 14.04 LTS (Trusty Tahr)
+* <b>Ubuntu</b> 16.04 LTS (Xenial Xerus)
 
 ## Supported Debian versions:
 
-* Debian 8 (jessie, old-stable)
-* Debian 9 / stable (stretch)
-* Debian testing (buster to-be-released-as-next-stable)
-* Debian unstable (sid never-to-be-released, aka rolling)
+* <b>Debian 8</b> (jessie, old-stable)
+* <b>Debian 9 / stable</b> (stretch)
+* <b>Debian testing</b> (buster to-be-released-as-next-stable)
+* <b>Debian unstable</b> (sid never-to-be-released, aka rolling)
