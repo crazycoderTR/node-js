@@ -1,5 +1,5 @@
 # NODEJS
-![nodejs](http://www.marketwire.com/library/MwGo/2016/3/9/11G086832/345633_Node.js_logo.svg.jpgcopy-577bb13a381b977281b23f35ab4a2965.jpg)
+![nodejs](http://dev.solace.com/wp-content/uploads/2015/07/node.js-logo-whitebg.png)
 
 # Descriptrion
 
