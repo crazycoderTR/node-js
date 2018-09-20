@@ -1,0 +1,35 @@
+html
+    head
+        title
+    body
+        - let school =  'Fırat University'
+        - let city = 'Elazığ'
+        span(style="color:red")
+            | Hi #{name}!
+        br
+        span My nickname: 
+            =nickname
+        br
+        hr
+        | My school: #{school.toUpperCase()}
+        br
+        | My school in #{city}
+        hr
+        br
+        hr
+        - let num = 1
+        if !num
+            | No numbers.
+        else if num === 12
+            | Num equals 12
+        else
+            | Num not equals 12
+        hr
+        br
+        hr
+        ul
+            each val,key in ['zero', 'one', 'two']
+                li #{key}: #{val}
+        hr
+        br
+        include footer

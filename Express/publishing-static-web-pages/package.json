@@ -1,8 +1,8 @@
 {
-  "name": "Express",
+  "name": "publishing-static-web-pages",
   "version": "1.0.0",
   "description": "",
-  "main": "first-app.js",
+  "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },

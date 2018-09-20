@@ -25,15 +25,14 @@ app.get('/', (req, res) => {
 /* --------------- Middleware using for all router ---------------
 app.use(middleware.requireAuthentication);
 ---------------------------------------------------------------- */
-
+app.set('view engine','pug');
+app.use(express.static(__dirname + '/public'));
 app.use(middleware.logger);
 
 // Middleware using only about router
-app.get('/about', middleware.requireAuthentication, (req, res) => {
-    res.send('About Page');
+app.get('/home', middleware.requireAuthentication, (req, res) => {
+    res.render('home');
 });
-// Express static
-app.use(express.static(__dirname + '/public'));
 
 //Express port
 app.listen(3000, () => {

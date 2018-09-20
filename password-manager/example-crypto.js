@@ -1,7 +1,7 @@
 "use strict";
 /*---------------------------------------- Variable Definition ----------------------------------------*/
 const crypto = require("crypto-js");
-let message = "kralmesut13579";
+let message = "this is a message";
 let key = "123";
 /*---------------------------------------- Variable Definition ----------------------------------------*/
 

@@ -21,5 +21,5 @@ const argv = require('yargs')
 
 /*--------------------- First use of yargs ---------------------*/
 if(argv._[0] === 'hello' && typeof argv.name !== 'undefined' && argv.surname !== 'undefined'){
-	console.log('Hoşgeldiniz ' + argv.name + ' ' + argv.surname);
+	console.log('Welcome ' + argv.name + ' ' + argv.surname);
 }
