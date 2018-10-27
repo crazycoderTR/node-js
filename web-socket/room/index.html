@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Web Socket</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.1.1/socket.io.js"></script>
+    <script>
+        $(() => {
+            const socket = io.connect('http://localhost:3000', {
+                reconnectionAttempts: 3,
+                reconnetionDelay: 1000
+            });
+
+            socket.on('reconnect_attempt', () => {
+                $('.reconnectStatus').html('Trying Reconnect');
+            });
+
+            socket.on('reconnect_error', () => {
+                $('.reconnectStatus').html('Reconnect unsuccessful');
+            });
+
+            socket.on('reconnect', () => {
+                $('.reconnectStatus').html('Reconnect successful');
+            });
+            
+            $('#join-room').on('click', () => {
+                socket.emit('join-room', {name: $('#room-name').val()});
+            });
+
+            $('#leave-room').on('click', () => {
+                socket.emit('leave-room', {name: $('#room-name').val()});
+            });
+            
+            socket.on('new-join', (data) => {
+                $('#userCount').html(`<p> There are ${data.count} person in this room!  </p>`);
+            });
+
+            socket.on('you-join', () => {
+                $('.log').append('<p> Someone joined to room </p>');
+            });
+            
+            socket.on('leavedRoom', (data) => {
+                $('#userCount').html(`<p> There are ${data.count} person in this room!  </p>`);
+            });
+
+            socket.on('you-joined', (data) => {
+                $('.log').append(data.message);
+                $('#room-name, #join-room').attr('disabled', 'disabled');
+                $('#leave-room').show();
+            });
+
+            socket.on('socket.leave', (data) => {
+                $('.log').append(data.message);
+                $('#room-name, #join-room').removeAttr('disabled');
+                $('#leave-room').hide();
+                $('#userCount').empty();
+                $('.log').empty();
+            });
+        });
+    </script>
+    <style>
+        #leave-room{
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="reconnectStatus"></div>
+    <input type="text" id="room-name">
+    <button id="join-room">Join</button>
+    <button id="leave-room">Leave</button>
+    <div class="log"></div>
+    <div id="userCount"></div>
+</body>
+</html>

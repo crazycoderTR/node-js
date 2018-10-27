@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Web Socket</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.1.1/socket.io.js"></script>
+    <script>
+        $(() => {
+            const socket = io.connect('http://localhost:3000/crazycoder');
+
+            $('button').on('click', () => {
+                socket.emit('Send Name', {
+                    name: 'crazycoder'
+                });
+            });
+
+            socket.on('Turn back data', (data) => {
+                $('body').append(`${data.name} <br>`);
+            });
+        });
+    </script>
+</head>
+<body>
+    <button>Send Message</button>
+</body>
+</html>
