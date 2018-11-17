@@ -1,7 +1,7 @@
 # NODEJS
 ![nodejs](http://dev.solace.com/wp-content/uploads/2015/07/node.js-logo-whitebg.png)
 
-# Descriptrion
+# Description
 
 Node.js is an open-source, cross-platform JavaScript run-time environment that executes JavaScript code server-side.
 
